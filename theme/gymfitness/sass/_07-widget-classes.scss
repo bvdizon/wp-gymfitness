@@ -1,0 +1,22 @@
+// CLASSES - WIDGET
+.sidebar-classes {
+
+    &__class {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        flex: 0 0 25%;
+    }
+
+    &__content {
+        flex: 0 0 calc(75% - 1rem);
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+// SINGLE POST
+@media screen and (min-width: 1024px) {
+    .blog-with-sidebar {
+        display: flex;
+        justify-content: space-between;
+
+        .blog-full {
+            width: calc(60% - 1rem);
+        }
+
+        .blog-sidebar {
+            width: calc(40% - 1rem);
+        }
+    }
+}
+
+.underline {
+    height: 3px;
+    width: 10rem;
+    margin: 0 auto;
+    background-color: var(--lightGray);
+}
+
+.search-form {
+    text-align: center;
+
+    .search-submit {
+        display: none;
+    }
+
+    .search-field {
+        width: 100%;
+        padding: 1rem 0.5rem;
+        border: none;
+        border-bottom: 2px solid var(--primary);
+
+        &:focus {
+            border: none;
+            outline: none;
+            border-bottom: 2px solid var(--darkGray);
+        }
+
+    }
+}
+
+.nav-previous a,
+.nav-next a {
+    color: var(--primary);
+    font-family: var(--secondaryFont);
+    font-weight: 700;
+
+    &:hover {
+        color: var(--darkGray)
+    }
+}
+
+.widget {
+    background-color: var(--lightGray);
+    padding: 2rem 5rem;
+
+    ul {
+        margin: 0;
+        list-style-type: initial;
+    }
+
+    a {
+        font-family: var(--secondaryFont);
+        color: var(--darkGray);
+    }
+
+    a:hover,
+    a:focus {
+        color: var(--primary);
+    }
+}
+
+.blog-sidebar {
+    margin-top: 5rem;
+}
+
+.widget-title {
+    margin: 1rem 0;
+}
+
+
+.single-post #submit {
+    background-color: var(--primary);
+    color: var(--white);
+    font-family: var(--mainFont);
+    letter-spacing: 1px;
+    padding: 1.5rem 2rem;
+}

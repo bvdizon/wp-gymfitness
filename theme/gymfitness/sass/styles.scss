@@ -1,0 +1,346 @@
+@import '01-reset';
+@import '02-global';
+@import '03-header-footer';
+@import '04-blog-posts';
+@import '05-single-post';
+@import '06-classes';
+@import '07-widget-classes';
+@import '08-gallery';
+@import '09-contact-form';
+
+:root {
+    /** Fonts **/
+    --mainFont: 'Staatliches', cursive;
+    --textFont: 'Open Sans', sans-serif;
+    --secondaryFont: 'Raleway', sans-serif;
+
+    /** Colors **/
+    --primary: #FF5B00;
+    --darkGray: #2F2E2E;
+    --lightGray: #EBEBEB;
+
+    --white: #ffffff;
+    --black: #000000;
+}
+
+
+
+
+// HEADER-FRONT
+.hero {
+    position: relative;
+
+    &-text {
+        position: absolute;        
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        padding: 0 1rem;
+        transform: translate(-50%, -50%);
+        color: var(--white);
+        text-align: center;
+
+        h1 {
+            font-family: var(--mainFont);
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-family: var(--secondaryFont);
+            line-height: 2;
+        }
+    }
+
+    img {
+        filter: brightness(20%);
+        height: 50rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #masthead.front-page-header {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .wrapper {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .hero {
+
+        img {
+            height: 50rem;
+        }
+
+        &-text {
+            width: 70%;
+            margin-top: 7rem;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        &-text {
+            width: 35%;
+            margin-top: 0;
+        }
+    }
+}
+
+// WELCOME - FRONT
+.gymfitness-areas {
+    margin: 0;
+    padding: 0;
+
+    li {
+        position: relative;
+    }
+
+    img {
+        display: block;
+        filter: brightness(20%);
+    }
+
+    h3 {
+        font-family: var(--mainFont);
+        font-size: 3rem;
+        letter-spacing: 1px;
+        color: var(--white);
+        text-align: center;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    li:hover {
+
+        h3 {
+            color: var(--primary);
+        }
+
+        img {
+            display: block;
+            filter: brightness(100%);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .gymfitness-areas {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > * {
+            flex: 0 0 50%;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .gymfitness-areas {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+
+        img {
+            object-fit: cover;
+        }
+
+
+        &>* {
+            flex: 0 0 25%;
+        }
+    }
+}
+
+// INSTRUCTORS - FRONT
+.instructors {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        margin-bottom: 5rem;
+    }
+
+    h3 {
+        color: var(--black);
+        font-family: var(--mainFont);
+        font-size: 3rem;
+        letter-spacing: 1px;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    .specialty {
+        span {
+            font-family: var(--mainFont);
+            letter-spacing: 1px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 3px;
+            margin: 2rem 3px 0 0;
+            display: inline-block;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .instructors {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+
+        li {
+            flex: 0 0 calc(50% - 1rem);
+            position: relative;       
+            margin-bottom: 0;    
+        }
+
+        img {
+            display: block;
+            height: 35rem;
+            object-fit: cover;
+            width: 100%;
+            transition: all .5s ease-in-out;
+            backface-visibility: hidden;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding: 0 3rem;
+            backface-visibility: hidden;
+
+            display: none;
+
+            h3, p {
+                color: var(--white);
+                line-height: 1.8;
+                margin: 0;
+            }
+
+            & > * {
+                transition: all .5s ease-in-out;
+            }
+        }
+
+        li:hover {
+            img {
+                filter: brightness(20%);
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
+
+
+// TESTIMONIALS Section
+.testimonials-section {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.85);
+    }
+}
+
+
+// BXSLIDER Overrides
+#testimonials.bxslider {
+    position: relative;
+
+    .testimonial {
+        color: var(--white);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+
+        p{
+            padding: 10rem 5rem 2rem 5rem;
+
+            @media (min-width: 1024px) {
+                padding: 10rem 20rem 2rem 20rem;
+            }
+        }
+
+        img {
+            border-radius: 50%;
+            width: 5rem;
+            margin: 0 auto;
+        }
+    }   
+}
+
+.bx-wrapper {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--white);
+    z-index: 2;
+    position: relative;
+
+    &::after {
+        content: '';
+        background-image: url('../images/quote.svg');        
+        background-size: 5rem 5rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background-color: var(--white);
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus,
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: #666;
+}
+

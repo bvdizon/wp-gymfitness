@@ -1,0 +1,101 @@
+.entry-title {
+
+    a {
+        color: var(--darkGray);
+    }
+}
+
+.more-link:link,
+.more-link:visited {
+    color: var(--primary);
+    font-family: var(--mainFont);
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--mainFont);
+    display: inline-block;
+    border-bottom: 1px solid var(--primary);
+}
+
+// CLASSES
+.class-card {
+    margin-bottom: 6rem;
+
+    &__content {
+        text-align: center;
+        margin-top: 1.5rem;
+
+        h2 {
+            font-family: var(--mainFont);
+            font-size: 3rem;
+            letter-spacing: 1px;
+            color: var(--darkGray);
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
+        h3 {
+            color: var(--primary);
+            font-family: var(--secondaryFont);
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .class-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 2rem;
+    }
+
+    .class-card {
+        flex: 0 0 calc(50% - 1rem);
+        position: relative;
+        margin-bottom: 0;
+
+        &__img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__content {
+            text-align: left;
+            padding: 0 0 2rem 2rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+
+            h2 {
+                color: var(--white);
+
+                &:hover {
+                    color: var(--white);
+                    text-decoration: underline;
+                }
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .gradient-overlay {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5494572829131652) 28%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
+}

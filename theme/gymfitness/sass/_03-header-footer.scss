@@ -1,0 +1,162 @@
+.current-menu-item a {
+    border-bottom: 3px solid var(--primary);
+}
+
+#masthead {
+    background-color: var(--darkGray);
+    text-align: center;
+
+    .wrapper {
+        padding: 0;
+    }
+}
+
+.menu-toggle {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    font-family: var(--secondaryFont);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#primary-menu {
+
+    a {
+
+        &:link,
+        &:visited {
+            font-family: var(--mainFont);
+            display: block;
+            padding: 1rem 0;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--primary);
+        }
+    }
+
+    li {
+        border-bottom: 1px solid var(--lightGray);
+
+        &:hover {
+            background-color: var(--lightGray);
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #primary-menu {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            border: none;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    #masthead .wrapper {
+        text-align: left;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #site-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #primary-menu {
+        a {
+            font-size: 2rem;
+
+            &:link,
+            &:active {
+                padding: 2rem 1rem;
+            }
+        }
+
+        li {
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+.site-branding img {
+    width: auto;
+}
+
+
+// FOOTER
+#menu-nav-menu {
+    margin: 0;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;    
+    border-top: 3px solid var(--lightGray);
+    padding-top: 3rem;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+
+    a {
+        padding: 1rem 0.5rem;
+        font-family: var(--mainFont);
+        color: var(--black);
+    }
+}
+
+.site-info {
+    font-family: var(--mainFont);
+    color: var(--black);
+    text-align: center;
+
+    a {
+        color: var(--primary);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-items {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+// HEADER - FIXED TOP
+@media (min-width: 1024px) {
+
+    #masthead.site-header.fixed-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: var(--darkGray);
+
+        .site-branding {
+            width: 120px;
+        }
+    }
+}

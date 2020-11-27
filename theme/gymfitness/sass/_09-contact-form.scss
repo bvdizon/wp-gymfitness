@@ -1,0 +1,57 @@
+// CONTACT US
+.wpcf7-form {
+
+    label {
+        font-family: var(--mainFont);
+        letter-spacing: 1px;
+    }
+
+    .wpcf7-form-control {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .wpcf7-submit {
+        width: 60%;
+        margin: 0 20%;
+        padding: 1.5rem;
+        background-color: var(--primary);
+        color: var(--white);
+        font-size: 1.8rem;
+        font-family: var(--mainFont);
+        border: none;
+        cursor: pointer;
+    }
+
+    &.invalid .wpcf7-response-output {
+        background-color: red;
+        color: var(--white);
+        text-align: center;
+        padding: 1.5rem 1rem;
+        border: none;
+    }
+
+    &.sent .wpcf7-response-output {
+        background-color: green;
+        color: var(--white);
+        text-align: center;
+        padding: 1.5rem 1rem;
+        border: none;
+    }
+
+    .wpcf7-not-valid-tip {
+        text-align: center;
+    }
+
+    .ajax-loader {
+        background-position: center center;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .wpcf7-form {
+        width: 60%;
+        margin: 0 auto;
+    }
+}

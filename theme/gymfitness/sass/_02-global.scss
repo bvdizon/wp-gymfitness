@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&family=Staatliches&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+// UTILITIES
+.wrapper {
+    max-width: 110rem;
+    padding: 0 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.narrow {
+    max-width: 90rem;
+    padding: 0 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-font {
+    color: var(--primary);
+    text-align: center;
+    font-family: var(--mainFont);
+    letter-spacing: 1px;
+    margin: 5rem 0 3rem 0;
+
+    &.front-title {
+        margin-top: 0;
+        padding-top: 5rem;
+        font-size: 3rem;
+        @media (min-width: 768px) {
+            font-size: 5rem;
+        }
+    }
+}
+
+.accent-text {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.white-text {
+    font-weight: 700;
+    color: var(--white);
+}
+
+.header-text {
+    font-family: var(--mainFont);
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-sm {
+    margin: 2rem 0;
+}
+
+.mb-sm {
+    margin-bottom: 2rem;
+}
+
+.mt-sm {
+    margin-top: 5rem;
+}
+
+.bg-gray {
+    background-color: var(--lightGray);
+}
+
+.pb-md {
+    padding-bottom: 3rem;
+}
+
+.pb-lg {
+    padding-bottom: 8rem;
+}
+
+
+
+// BUTTONS
+.btn {
+    font-family: var(--mainFont);
+    font-size: 2.5rem;    
+    letter-spacing: 1px;
+    padding: 1.2rem 2rem;
+    border: 1px solid transparent;
+
+    &-primary {
+        color: var(--white)!important;
+        background-color: var(--primary);
+
+        &:hover {
+            color: var(--primary) !important;
+            background-color: transparent;
+            border: 1px solid var(--primary);
+        }
+    }
+}
+
+// LAYOUT
+.page-with-sidebar__side {
+    margin-top: 5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .page-with-sidebar {
+        display: flex;
+        justify-content: space-between;
+
+        &__content {
+            width: calc(60% - 1rem);
+        }
+
+        &__side {
+            width: calc(40% - 1rem);
+        }
+    }
+}
+
+
+// LAYOUT - Front Page (instructors)
+.instructor-section {
+    padding-bottom: 8rem;
+}
